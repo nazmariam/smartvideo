@@ -1,0 +1,123 @@
+// ==================== MIXINS ==================== //
+//border-radius
+@mixin rounded($radius) {
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//shadow
+@mixin shadow($x, $y, $blur, $color) {
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin shadow-inset($x, $y, $blur, $color) {
+  -moz-box-shadow: inset $x $y $blur $color;
+  box-shadow: inset $x $y $blur $color;
+}
+
+//transition
+@mixin transition($property) {
+  -webkit-transition: $property 0.2s ease;
+  -moz-transition: $property 0.2s ease;
+  -o-transition: $property 0.2s ease;
+  transition: $property 0.2s ease;
+}
+
+@mixin custom-transition($property, $time, $animation_type) {
+  -webkit-transition: $property $time $animation_type;
+  -moz-transition: $property $time $animation_type;
+  -o-transition: $property $time $animation_type;
+  transition: $property $time $animation_type;
+}
+
+@mixin transition-delay($time) {
+  -webkit-transition-delay: $time;
+  -moz-transition-delay: $time;
+  -ms-transition-delay: $time;
+  -o-transition-delay: $time;
+  transition-delay: $time;
+}
+
+@mixin triple-transition-delay($time_one, $time_two, $time_three) {
+  -webkit-transition-delay: $time_one, $time_two, $time_three;
+  -moz-transition-delay: $time_one, $time_two, $time_three;
+  -ms-transition-delay: $time_one, $time_two, $time_three;
+  -o-transition-delay: $time_one, $time_two, $time_three;
+  transition-delay: $time_one, $time_two, $time_three;
+}
+
+//transform
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+//gradient
+@mixin linear-gradient($from, $to) {
+  background-color: $to;
+  background-image: -moz-linear-gradient($from, $to);
+  background-image: -o-linear-gradient($from, $to);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+  background-image: -webkit-linear-gradient($from, $to);
+  background-image: -ms-linear-gradient($from, $to);
+  background-image: linear-gradient($from, $to);
+}
+
+//general mixins
+@mixin user-select-none {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin visibility-hidden {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@mixin appearance-none {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+// ==================== CUSTOM MIXINS ==================== //
+//containers
+@mixin container($width) {
+  width: 100%;
+  max-width: $width;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin container-fluid($padding-side) {
+  width: 100%;
+  padding-right: $padding-side;
+  padding-left: $padding-side;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin idents-none {
+  padding: 0;
+  margin: 0;
+}

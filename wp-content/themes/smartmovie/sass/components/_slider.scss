@@ -1,0 +1,229 @@
+//SmartSlider modifications
+.main_slider {
+  max-width: 100%;
+  background: linear-gradient(
+                  to right,
+                  #0B2E59 0px,
+                  #0B2E59 92px,
+                  #fff 92px,
+                  #fff 100%
+  );
+  padding-left: 90px;
+  padding-bottom: 42px;
+  position: relative;
+  z-index: 2;
+
+  .n2-section-smartslider {
+    background: #0B2E59;
+  }
+
+  .n2-padding {
+    border-bottom: 3px solid #7AB317;
+  }
+
+  div#n2-ss-3 {
+    background: #0B2E59;
+    .nextend-arrow {
+      bottom: -45px !important;
+      img.n2-ow {
+        display: none;
+      }
+    }
+
+    .nextend-arrow-animated-horizontal > div {
+      width: 74px !important;
+      height: 90px !important;
+      background: #7AB317 url("../images/icons/arrow-right.svg") center no-repeat;
+    }
+    .nextend-arrow-next.nextend-arrow-animated-horizontal {
+      &:hover,
+      .n2-active {
+        background: #7AB317 url("../images/icons/arrow-right.svg") center no-repeat;
+      }
+    }
+    .nextend-arrow-previous.nextend-arrow-animated-horizontal {
+      > div,
+      &:hover > div,
+      .n2-active {
+        background: #7AB317 url("../images/icons/arrow-left.svg") center no-repeat;
+      }
+    }
+
+    .nextend-thumbnail-vertical .nextend-thumbnail-scroller {
+      background: #0B2E59;
+      padding: 0;
+      & > div {
+        padding: 0;
+        margin: 0 8px 8px;
+        opacity: 1;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: black;
+          opacity: 0.5;
+          transition: opacity .5s ease-out;
+          top: 0;
+          left: 0;
+        }
+        &.n2-active:after {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .float-btn {
+    @extend .absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(0px);
+
+    a {
+      @extend .btn;
+      @extend .btn-default;
+
+      font-size: $f22px;
+      padding: 32px;
+      background: $green;
+    }
+  }
+}
+
+.partners {
+  padding: 77px 0;
+
+  h2 {
+    //font-size: 36px;
+    color: $theme-color;
+    text-align: center;
+  }
+
+  .n2-padding {
+    padding: 22px 0 0;
+  }
+
+  div.n2-ss-slide {
+    box-shadow: 0 7px 35px rgba(90, 97, 105, 0.1),
+    0 15px 22px rgba(90, 97, 105, 0.1),
+    0 4px 8px rgba(90, 97, 105, 0.12),
+    0 2px 3px rgba(90, 97, 105, 0.11);
+  }
+
+  div#n2-ss-4 {
+    .n2-ss-slider-pane-single {
+      overflow-x: unset;
+    }
+
+    .nextend-arrow {
+      &.nextend-arrow-next {
+        background: url(../images/icons/arrow-right-circle.svg) center no-repeat;
+        width: 22px;
+        height: 22px;
+        right: -67px !important;
+
+        img.n2-ow {
+          display: none;
+        }
+      }
+      &.nextend-arrow-previous {
+        background: url(../images/icons/arrow-right-circle.svg) center no-repeat;
+        width: 22px;
+        height: 22px;
+        transform: rotate(180deg);
+        left: -67px !important;
+
+        img.n2-ow {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$screen-lg-max}) { // max-width: 1440px
+  .main_slider {
+    max-width: 100%; /* for example */
+  }
+}
+
+@media screen and (max-width: #{$screen-md-max}) { // max-width: 1024px
+  .main_slider {
+    max-width: 100%; /* for example */
+    padding-bottom: 0;
+
+    .menu {
+      .menu-item {
+        border: 0 !important;
+        padding: 0;
+      }
+    }
+
+    #n2-ss-10 .n2-ss-slide, #n2-ss-10 .n2-ss-layers-container, div#n2-ss-3 .n2-ss-layers-container, .n2-ss-slider .n2-ss-layer[data-pm=absolute]{
+      height: 100%!important;
+      top: 0!important;
+    }
+
+    .n2-ss-slider.n2-ss-mobile .n2-ss-slider-1, .n2-ss-slider.n2-ss-tablet .n2-ss-slider-1, div#n2-ss-3 .n2-ss-slide{
+      min-height: 565px !important;
+    }
+
+    div#n2-ss-3 .nextend-arrow{
+      bottom: 0!important;
+    }
+  }
+}
+
+@media screen and (max-width: #{$screen-sm-max}) { // max-width: 768px
+  /* for example: .container max-width will inherit from the previous breakpoint */
+}
+
+@media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
+  .main_slider {
+    max-width: 100%; /* for example */
+    padding-left: 0;
+    padding-bottom: 0;
+
+    .n2-padding{
+      border-bottom: 0;
+    }
+
+    #n2-ss-3 .nextend-arrow {
+      display: none;
+    }
+
+    .float-btn {
+      width: 100%;
+      position: relative;
+
+      a {
+        font-size: 18px;
+        padding: 12px 12px;
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  .partners{
+
+    div#n2-ss-4{
+      .nextend-arrow {
+        &.nextend-arrow-next {
+
+          right: 10px !important;
+
+        }
+        &.nextend-arrow-previous {
+          left: 10px !important;
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: #{$screen-xxs-max}) { // max-width: 320px
+}

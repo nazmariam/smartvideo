@@ -1,0 +1,194 @@
+html, body {
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  //overflow-y: scroll;
+
+  @extend .border-box;
+}
+
+body {
+  overflow-x: hidden;
+
+  @extend .flex;
+
+  @extend .relative;
+
+  @extend .border-box;
+
+  @include idents-none;
+
+  overflow-y: scroll;
+
+  flex-direction: column;
+}
+
+section {
+  @extend .relative;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img, object, embed {
+  max-width: 100%;
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  color: inherit;
+  width: inherit;
+  height: inherit;
+  outline: none!important;
+  text-decoration: none;
+  transition: color $default-transition;
+}
+
+a:hover {
+  color: $green;
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+}
+
+input,
+input[type="search"],
+textarea,
+button {
+  font-family: $default-font;
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all $default-transition;
+}
+
+*:not(img) {
+  outline: none;
+
+  @include idents-none;
+
+  @extend .border-box;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+.clearfix {
+  &:before {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+.container-fluid {
+  @include container-fluid($container-fluid-side-padding);
+}
+
+.container-content {
+  @include container-fluid($container-content-side-padding);
+}
+
+.container {
+  @include container(1140px);
+}
+
+/*
+ * Large devices (laptops, less than 1440px)
+ * - as prototype use design from the "1366px" layout;
+ * - the main content max-width is fixed (set in px);
+ */
+@media screen and (max-width: #{$screen-lg-max}) { // max-width: 1440px
+  .container{
+    @include container(1140px);
+  }
+}
+
+
+/*
+ * Medium devices (landscape tablets, less than 1024px)
+ * - as prototype use design from the "768px" layout;
+ * - the main content max-width is relative (set in %);
+ * - perhaps increase font-size by few pixels from the dimensions for "768px" layout
+ */
+@media screen and (max-width: #{$screen-md-max}) { // max-width: 1024px
+  .container-fluid {
+    @include container-fluid($container-fluid-side-padding-md);
+  }
+  .container-content {
+    @include container-fluid($container-content-side-padding-md);
+  }
+  .container{
+    @include container(80%);
+  }
+
+  body{
+    @viewport {
+      user-zoom: fixed;
+    }
+
+    &.showed, &.header-sticky{
+      overflow-y: hidden;
+    }
+  }
+}
+
+
+/*
+ * Small devices (portrait tablets, landscape phones, less than 768px)
+ * - as prototype use design from the "768px" layout;
+ * - the main content max-width is relative (set in %) or inherit from the previous breakpoint;
+ */
+@media screen and (max-width: #{$screen-sm-max}) { // max-width: 768px
+  /* for example: .container max-width will inherit from the previous breakpoint */
+}
+
+
+/*
+ * Extra Small devices (portrait phones, less than 590px)
+ * - as prototype use design from the "375px" layout;
+ * - the main content max-width is relative (set in %) or inherit from the previous breakpoint;
+ */
+@media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
+  body{
+    &:before{
+      display: none;
+    }
+  }
+  .container-fluid {
+    @include container-fluid($container-fluid-side-padding-xs);
+  }
+  .container-content {
+    @include container-fluid($container-content-side-padding-xs);
+  }
+  .container{
+    @include container(90%);
+  }
+}
+
+
+/*
+ * iPhone S or similar devices (portrait phones, less than 320px)
+ * - as prototype use design from the "375px" layout;
+ * - the main content max-width is relative (set in %) or inherit from the previous breakpoint;
+ * - perhaps reduce font-size by few pixels from the dimensions for "375px" layout
+ */
+@media screen and (max-width: #{$screen-xxs-max}) { // max-width: 320px
+  /* for example: .container max-width will inherit from the previous breakpoint */
+}

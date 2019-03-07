@@ -1,0 +1,192 @@
+// display
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.none{
+  display: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+// position
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+// text-align
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// overflow
+.o-hidden {
+  overflow: hidden;
+}
+
+.o-hidden-x {
+  overflow-x: hidden;
+}
+
+.o-hidden-y {
+  overflow-y: hidden;
+}
+
+// user events
+.us-none {
+  user-select: none;
+}
+
+.pe-none {
+  pointer-events: none;
+}
+
+.pe-auto {
+  pointer-events: auto;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+// flex directions or main axis
+.fd-column {
+  flex-direction: column;
+}
+
+.fd-row {
+  flex-direction: row;
+}
+
+// flex horizontal align items
+.jc-center {
+  justify-content: center;
+}
+
+.jc-space-around {
+  justify-content: space-around;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.jc-space-evenly {
+  justify-content: space-evenly;
+}
+
+.jc-start {
+  justify-content: flex-start;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.js-stretch {
+  justify-content: stretch;
+}
+
+// flex vertical align items
+.ai-start {
+  align-items: flex-start;
+}
+
+.ai-baseline {
+  align-items: baseline;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ac-start {
+  align-content: flex-start;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+.ai-stretch {
+  align-items: stretch;
+}
+
+// Notices
+.notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-notice{
+  color: $error-color;
+}
+
+.warning-notice{
+  color: $warning-color;
+}
+
+.hidden-lg{
+  display: none;
+}
+
+@media screen and (max-width: #{$screen-lg-max}) { // max-width: 1440px
+ .hidden-md{
+   display: none;
+ }
+}
+
+@media screen and (max-width: #{$screen-md-max}) { // max-width: 1024px
+  .hidden-sm{
+    display: none;
+  }
+}
+
+@media screen and (max-width: #{$screen-sm-max}) { // max-width: 768px
+
+}
+
+@media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
+  .hidden-xs{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: #{$screen-xxs-max}) { // max-width: 320px
+}

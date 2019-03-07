@@ -1,0 +1,54 @@
+.social_share_box{
+  position: fixed;
+  width: 90px;
+  height: 100%;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #0b2e59;
+  background: linear-gradient(to bottom, #0b2e59 0%, #0b2e59 122px, #051c37 75%, #051c37 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b2e59', endColorstr='#051c37',GradientType=0 );
+  .share{
+    cursor: pointer;
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 30px 0;
+    svg{
+      stroke: white;
+    }
+  }
+}
+
+@media screen and (max-width: #{$screen-lg-max}) { // max-width: 1440px
+}
+
+@media screen and (max-width: #{$screen-md-max}) { // max-width: 1024px
+}
+
+@media screen and (max-width: #{$screen-sm-max}) { // max-width: 768px
+  .social_share_box {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
+  .social_share_box {
+    width: 100%;
+    flex-direction: row;
+    height: 54px;
+    position: absolute;
+    top: auto;
+    bottom: 90px;
+    .share{
+      margin: 0 20px;
+    }
+  }
+}
+
+@media screen and (max-width: #{$screen-xxs-max}) { // max-width: 320px
+}

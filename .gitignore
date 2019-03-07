@@ -1,0 +1,50 @@
+# phpstorm project files
+.idea
+
+# windows thumbnail cache
+Thumbs.db
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+# vagrant runtime
+/.vagrant
+/composer.lock
+
+/wp-comments-post.php
+/wp-activate.php
+/wp-blog-header.php
+/readme.html
+/index.php
+/license.txt
+/wp-cron.php
+/wp-config.php
+/wp-mail.php
+/wp-settings.php
+/wp-trackback.php
+/wp-login.php
+/wp-config-sample.php
+/xmlrpc.php
+/wp-signup.php
+/wp-links-opml.php
+/wp-load.php
+/wp-content/index.php
+/wp-content/debug.log
+
+/updraft/
+updraft
+
+/wp-admin/*
+/wp-includes/*
+/wp-content/themes/smartmovie/node_modules/
+/wp-content/themes/smartmovie/.sass-cache/
+/wp-content/themes/smartmovie/css/main.css
+
+!/wp-admin/.htaccess
+!/wp-includes/.htaccess
+/wp-content/uploads/
+/wp-content/languages/
+/wp-content/plugins/
+/wp-content/upgrade/

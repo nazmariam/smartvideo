@@ -1,0 +1,122 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+  margin: 0 auto;
+  min-width: 1000px;
+  overflow: auto;
+  padding: 0;
+}
+
+#wpcontent {
+}
+
+.wrap h1 {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+legend {
+  display: block;
+  width: 25%;
+  padding: 0;
+  margin: 0;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #F14D49;
+}
+
+.fixed_save {
+  position: fixed;
+  top: 50px;
+  right: 10px;
+}
+
+.prototype {
+	display: none;
+}
+
+.main_item {
+	padding: 5px 20px;
+	position: relative;
+}
+.main_item .chapter_icon {
+	display: inline-block;
+}
+.chapter_icon_img {
+	width: 18px;
+	position: absolute;
+	top: 8px;
+}
+/*file inputs styles*/
+.file-input,
+.file-input-new {
+	display: inline-block;
+	width: 500px;
+	margin-left: 25px;
+}
+.form-control {
+  padding: 0 5px;
+  width: 50%;
+}
+/*file inputs styles*/
+.main_item .main_item_name {
+	border: 1px solid #206eb6;
+	border-radius: 3px;
+	font-weight: bold;
+	font-size: 15px;
+	width: 600px;
+}
+.item_box .faq_input {
+  width: 500px;
+  margin-bottom: 5px;
+
+}
+.item_box .faq_textarea {
+  width: 500px;;
+
+}
+.toggler {
+	padding: 5px;
+}
+.fa {
+	font-size: 20px;
+	position: relative;
+	top: 2px;
+}
+.fa-caret-square-o-up,
+.fa-caret-square-o-down {
+	cursor: pointer;
+	color: #206eb6;
+}
+.fa-minus-circle {
+	color: #FA5555;
+	cursor: pointer;
+}
+.fa-caret-square-o-up {
+	display: none;
+}
+
+.add_section,
+.add_question {
+  margin: 5px 0;
+  padding: 1px 5px;
+}
+
+.items_box {
+	display: none;
+	padding: 5px 40px 0;
+}
+.item_box {
+	padding: 10px 0 0;
+}
+

@@ -1,0 +1,130 @@
+//Fonts
+$default-font: 'Arimo', sans-serif;
+$secondary-font: 'Tinos', serif;
+
+//Font weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+//Font size
+$f8px: 0.55em;
+$f10px: 0.625em;
+$f11px: 0.688em;
+$f12px: 0.75em;
+$f13px: 0.813em;
+$f14px: 0.875em;
+$f15px: 0.9375em;
+$f16px: 1em;
+$f17px: 1.063em;
+$f18px: 1.125em;
+$f20px: 1.25em;
+$f22px: 1.4em;
+$f24px: 1.5em;
+$f25px: 1.563em;
+$f26px: 1.625em;
+$f30px: 1.875em;
+$f33px: 2.063em;
+$f35px: 2.188em;
+$f36px: 2.250em;
+$f38px: 2.375em;
+$f40px: 2.5em;
+$f42px: 2.625em;
+$f44px: 2.750em;
+$f45px: 2.813em;
+$f48px: 3.000em;
+$f50px: 3.125em;
+$f64px: 4.000em;
+$f70px: 4.375em;
+$f90px: 5.625em;
+$f115px: 7.188em;
+$f120px: 7.5em;
+$f180px: 11.25em;
+
+$f14pxlh: 20px;
+$f15pxlh: 23px;
+$f16pxlh: 24px;
+$f18pxlh: 29px;
+$f24pxlh: 33px;
+$f42pxlh: 52px;
+$f48pxlh: 58px;
+
+//Colors
+$default-color: #909090;
+$primary-color: #000000;
+$theme-color: #0B2E59;
+$dark-blue: #1C3664;
+$footer-color: #051C37;
+$white: #ffffff;
+$blue: #0063E8;
+$dark: #353535;
+$black: #282828;
+$green: #7AB317;
+$light-green: #9CDA30;
+$light-grey: #f2f2f2;
+$light-grey-2: #F9FAFD;
+$teaser-bg: #EDF1F8;
+$geo-mark-color: #C4C7D0;
+$form-border-color: #E0E0E0;
+$error-color: #FF0000;
+$warning-color: #ece605;
+$violations-color: #444444;
+$disabled-color: #E1E1E1;
+
+// Shadows
+$dafault-shadow: 0px 7px 35px rgba(90, 97, 105, 0.1),
+0px 15px 22px rgba(90, 97, 105, 0.1),
+0px 4px 8px rgba(90, 97, 105, 0.12),
+0px 2px 3px rgba(90, 97, 105, 0.11);
+
+//Transition
+$default-transition: 0.3s ease-in-out;
+$ease-transition: 0.2s ease all;
+$long-transition: 0.5s ease-in-out;
+$menu-transition: 0.7s ease-in-out;
+
+// additional data
+$path-to-images: "../images/";
+
+$header-height: 90px;
+$footer-height: 347px;
+$sliders-stripe-width: 90px;
+$events-previews-width: 1200px;
+
+/**
+ *  Responsive
+ *  - It's convenient to use vars in sass
+ *  - Use vars to set the values of breakpoints*
+ */
+//  Laptops
+$screen-lg-max: 1440px;
+
+//  landscape Tablets
+$screen-md-max: 1024px;
+
+//  portrait Tablets, landscape Phones
+$screen-sm-max: 768px;
+
+//  portrait Phones
+$screen-xs-max: 590px;
+
+//  iPhone S or similar devices
+$screen-xxs-max: 320px;
+
+$container-fluid-side-padding: 7%;
+$container-fluid-side-padding-lg: 7%;
+$container-fluid-side-padding-md: 7%;
+$container-fluid-side-padding-sm: 7%;
+$container-fluid-side-padding-xs: 5%;
+$container-fluid-side-padding-xxs: 5%;
+
+$container-content-side-padding: 27%;
+$container-content-side-padding-lg: 27%;
+$container-content-side-padding-md: 16%;
+$container-content-side-padding-sm: 16%;
+$container-content-side-padding-xs: 5%;
+$container-content-side-padding-xxs: 5%;

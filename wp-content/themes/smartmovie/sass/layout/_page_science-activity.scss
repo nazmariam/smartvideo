@@ -1,0 +1,374 @@
+
+.sh-science-activity-page {
+  .main-content {
+    .content {
+
+      .tabs-wrapper {
+        .tabs {
+          width: 100%;
+          border-bottom: 1px solid $form-border-color;
+
+          margin: 0 auto 81px auto;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+
+          .tab {
+            flex-grow: 1;
+            width: 50%;
+            text-align: center;
+            text-transform: uppercase;
+            cursor: default;
+
+            .text-cont {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 5px 0;
+              width: 100%;
+              height: 100%;
+              position: relative;
+              top: 1px;
+              font-size: 24px;
+              line-height: 28px;
+              color: $black;
+              font-family: $secondary-font;
+              transition: all $default-transition;
+              border-bottom: 3px solid transparent;
+              cursor: pointer;
+            }
+
+            &:hover, &.active {
+              .text-cont {
+                border-bottom: 3px solid $green;
+              }
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        .items {
+          display: table;
+          width: 100%;
+          border-spacing: 0px 20px;
+          .item {
+            display: table-row;
+            margin: 0 auto 20px auto;
+            color: $theme-color;
+            font-family: $secondary-font;
+
+            > div {
+              display: table-cell;
+              vertical-align: middle;
+              padding: 25px 40px;
+              border-top: 1px solid #e0e0e0;
+              border-bottom: 1px solid #e0e0e0;
+
+              &:first-child {
+                border-left: 1px solid #e0e0e0;
+              }
+              &:last-child {
+                border-right: 1px solid #e0e0e0;
+              }
+            }
+          }
+        }
+
+        &.tab-content_conferences {
+          .items {
+            .item {
+              &__date {
+                background-color: $theme-color;
+                text-align: center;
+                color: $white;
+                width: 1%;
+                padding: 18px 20px;
+                white-space: nowrap;
+                .day {
+                  font-size: $f48px;
+                  line-height: 42px;
+                }
+                .month-nsme, .year {
+                  font-size: $f15px;
+                  line-height: 16px;
+                  font-family: $default-font;
+                  text-transform: lowercase;
+                }
+              }
+              &__title {
+                a {
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  font-size: $f24px;
+                  line-height: $f24pxlh;
+                }
+              }
+            }
+          }
+        }
+
+        &.tab-content_publications {
+          .items {
+            .item {
+              .item__author {
+                padding: 25px 20px;
+                vertical-align: top;
+                font-family: $default-font;
+                padding-left: 40px;
+                a {
+                  text-decoration: none;
+                  font-weight: $bold;
+                  font-size: $f18px;
+                  line-height: $f18pxlh;
+                  font-family: $default-font;
+                }
+              }
+              .item__title {
+                a {
+                  font-size: $f18px;
+                  line-height: $f18pxlh;
+                  font-family: $default-font;
+                  text-decoration: underline;
+                }
+              }
+              .item__url {
+                width: 1%;
+                text-align: center;
+                padding-right: 40px;
+                a {
+                  display: block;
+                  width: 28px;
+                  height: 29px;
+                  margin: 0 auto 6px auto;
+
+                  .svg-file-logo {
+                    fill: $green;
+                    width: 28px;
+                    height: 29px;
+                  }
+                }
+                .filesize {
+                  white-space: nowrap;
+                  color: $geo-mark-color;
+                  font-size: 14px;
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .load-more-cont {
+        margin-top: 118px;
+        .devider {
+          border-bottom: 1px solid $light-grey;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$screen-lg-max}) { // max-width: 1440px
+}
+
+@media screen and (max-width: #{$screen-md-max}) { // max-width: 1024px
+  .sh-science-activity-page {
+    .main-content {
+      .content {
+        .tabs-wrapper {
+          .tabs {
+            margin: 0 auto 51px auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$screen-sm-max}) { // max-width: 768px
+  .sh-science-activity-page {
+    .main-content {
+      .content {
+        padding-top: 65px;
+        padding-bottom: 65px;
+        .container-fluid,
+        .container-content{
+          padding-right: 5%;
+          padding-left: 5%;
+        }
+        h2{
+          text-align: left;
+          margin-bottom: 33px;
+        }
+        .tabs-wrapper {
+          .tabs {
+            flex-direction: column;
+            &.reversed{
+              flex-direction: column-reverse;
+            }
+            .tab{
+              width: 100%;
+              display: none;
+              position: relative;
+              text-align: left;
+              &:hover{
+                .text-cont{
+                }
+              }
+              .text-cont{
+                padding: 10px 0 9px;
+                justify-content: flex-start;
+              }
+              &.active{
+                display: block;
+                &:after{
+                  content: '';
+                  position: absolute;
+                  top: 45%;
+                  right: 0;
+                  background: url("../images/icons/drop_down.svg") center no-repeat;
+                  background-size: cover;
+                  width: 12px;
+                  height: 6px;
+                }
+              }
+            }
+          }
+        }
+        .tab-content {
+          &.tab-content_conferences {
+            .items {
+              .item {
+                > div {
+                  padding: 20px;
+                }
+              }
+              .item__title {
+                a {
+                  font-style: normal;
+                  font-weight: normal;
+                  line-height: 33px;
+                  font-size: 24px;
+                  letter-spacing: 0.02em;
+                }
+              }
+              .item__date {
+                .day {
+                  font-size: $f42px;
+                  line-height: 38px;
+                }
+              }
+            }
+          }
+          &.tab-content_publications {
+            .items {
+              .item{
+                .item__author {
+                  padding: 23px 20px;
+                  a {
+                    font-size: $f16px;
+                    line-height: $f16pxlh;
+                  }
+                }
+                .item__title {
+                  padding: 23px 20px;
+                  a {
+                    font-size: $f16px;
+                    line-height: $f16pxlh;
+                  }
+                }
+                .item__url{
+                  padding: 10px 16px 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
+
+  .sh-science-activity-page {
+    .main-content {
+      .content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        h2{
+          margin-bottom: 21px;
+        }
+        .tabs-wrapper {
+          .tabs {
+            margin: 0 auto 30px auto;
+            .tab {
+              .text-cont {
+                font-style: normal;
+                font-weight: normal;
+                line-height: normal;
+                font-size: 18px;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+
+        .tab-content {
+          &.tab-content_conferences {
+            .items {
+              .item {
+                > div {
+                  padding: 25px 17px;
+                }
+              }
+              .item__title {
+                a {
+                  font-size: $f18px;
+                  line-height: 26px;
+                }
+              }
+              .item__date {
+                .day {
+                  font-size: $f42px;
+                  line-height: 38px;
+                }
+              }
+            }
+          }
+          &.tab-content_publications {
+            .items {
+              .item{
+                .item__author {
+                  display: block;
+                  padding: 15px 20px 0;
+                  border-bottom: none;
+                  a {
+                    font-size: $f16px;
+                    line-height: $f16pxlh;
+                  }
+                }
+                .item__title {
+                  display: block;
+                  padding: 4px 8px 20px 20px;
+                  border-left: 1px solid #e0e0e0;
+                  border-top: none;
+                  a {
+                    font-size: $f16px;
+                    line-height: $f16pxlh;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$screen-xxs-max}) { // max-width: 320px
+}

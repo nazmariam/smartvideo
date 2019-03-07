@@ -1,0 +1,67 @@
+//Global
+html {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+body {
+  font-family: $default-font;
+  font-size: $f16px;
+  font-weight: $regular;
+  color: $default-color;
+  -webkit-font-smoothing: antialiased;
+}
+
+p, span {
+  //line-height: 1;
+  line-height: inherit;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4{
+  font-family: $secondary-font;
+  font-weight: $regular;
+  text-transform: uppercase;
+}
+
+h1, .h1 {
+  font-size: $f38px;
+  font-weight: $bold;
+}
+
+h2, .h2 {
+  font-size: $f33px;
+}
+
+h3, .h3 {
+  font-size: $f26px;
+}
+
+h4, .h4 {
+  font-size: $f16px;
+}
+
+@media screen and (max-width: #{$screen-lg-max}) {// max-width: 1440px
+
+}
+
+@media screen and (max-width: #{$screen-md-max}) { // max-width: 1024px
+}
+
+@media screen and (max-width: #{$screen-sm-max}) { // max-width: 768px
+
+}
+
+@media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
+  h1, .h1{
+    font-size: $f24px;
+  }
+
+  h2, .h2 {
+    font-size: $f24px;
+  }
+
+
+}

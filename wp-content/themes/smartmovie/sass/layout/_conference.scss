@@ -1,0 +1,132 @@
+.sh-conference-page {
+  .main-content {
+    .content {
+      .top-description {
+        margin-bottom: 70px;
+        p {
+          font-size: $f16px;
+          line-height: $f16pxlh;
+          text-align: center;
+          margin-bottom: 13px;
+        }
+      }
+
+      .single-img {
+        width: 100%;
+        margin-bottom: 103px;
+      }
+
+      .extra-info {
+        font-size: 0px;
+        margin-bottom: 50px;
+        .item {
+          width: 50%;
+          display: flex;
+          float: left;
+          .icon {
+            svg {
+              stroke: $green;
+              stroke-width: 2px;
+              width: 18px;
+              height: 20px;
+              margin-right: 30px;
+            }
+          }
+          .details {
+            padding-right: 15px;
+            .text, .date {
+              font-size: 18px;
+              line-height: 21px;
+            }
+            .date {
+              color: $green;
+              text-transform: lowercase;
+            }
+          }
+        }
+      }
+      .organizers {
+        margin-top: 70px;
+
+        .subsection-title {
+          margin-bottom: 30px;
+        }
+
+
+        .item {
+          width: 100%;
+          display: flex;
+          margin-bottom: 22px;
+          .icon {
+            svg {
+              stroke: $green;
+              stroke-width: 2px;
+              width: 24px;
+              height: 23px;
+              margin-right: 30px;
+            }
+          }
+          .details {
+            font-size: $f16px;
+            line-height: $f16pxlh;
+            a {
+              color: $green;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$screen-lg-max}) { // max-width: 1440px
+}
+
+@media screen and (max-width: #{$screen-md-max}) { // max-width: 1024px
+}
+
+@media screen and (max-width: #{$screen-sm-max}) { // max-width: 768px
+}
+
+@media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
+  .sh-conference-page {
+    .main-content {
+      .content {
+        .top-description {
+          margin-bottom: 45px;
+          p {
+            font-size: $f14px;
+            line-height: $f14pxlh;
+            margin-bottom: 11px;
+          }
+        }
+        .single-img {
+          margin-top: 0;
+          margin-bottom: 39px;
+        }
+        .extra-info {
+          .item {
+            width: 100%;
+            float: none;
+            margin-bottom: 29px;
+
+            .details {
+              .text, .date {
+                font-size: 16px;
+                line-height: 19px;
+              }
+            }
+
+            &:last-child {
+              margin-bottom: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$screen-xxs-max}) { // max-width: 320px
+}

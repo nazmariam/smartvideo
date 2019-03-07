@@ -1,0 +1,33 @@
+.form-group{
+    margin: 8px 0 16px;
+}
+
+.form-group label{
+    display: block;
+}
+
+.price_box {
+    border: 1px solid #cdcdcd;
+    padding: 10px 14px;
+    margin: 0 0 10px;
+    position: relative;
+}
+.price_box .desc{
+    width: 70%;
+    min-width: 450px;
+    padding: 4px 8px;
+}
+.price_box .price {
+    width: 10%;
+    padding: 4px 8px;
+}
+.button.price_del {
+    background: #f14d49;
+    color: white;
+    border: 1px solid #f14d49;
+    border-radius: 4px;
+    padding: 0 12px;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+}
