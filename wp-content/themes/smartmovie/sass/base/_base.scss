@@ -3,38 +3,12 @@ html, body {
 }
 
 html {
-  //overflow-y: scroll;
-
-  @extend .border-box;
+  height: 100%;
 }
 
 body {
-  overflow-x: hidden;
-
-  @extend .flex;
-
-  @extend .relative;
-
-  @extend .border-box;
-
-  @include idents-none;
-
-  overflow-y: scroll;
-
-  flex-direction: column;
-}
-
-section {
-  @extend .relative;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-img, object, embed {
-  max-width: 100%;
+  background: #fdfaf3;
+  min-height: 100%;
 }
 
 a,
@@ -49,64 +23,21 @@ a:visited {
   text-decoration: none;
   transition: color $default-transition;
 }
-
 a:hover {
-  color: $green;
   cursor: pointer;
 }
 
-fieldset {
-  border: none;
+.section {
 }
-
-input,
-input[type="search"],
-textarea,
-button {
-  font-family: $default-font;
-  background: none;
-  border: none;
-  border-radius: 0;
-  cursor: pointer;
-  transition: all $default-transition;
-}
-
-*:not(img) {
-  outline: none;
-
-  @include idents-none;
-
-  @extend .border-box;
-
-  &:before,
-  &:after {
-    box-sizing: inherit;
-  }
-}
-
-.clearfix {
-  &:before {
-    content: " ";
-    display: table;
-    clear: both;
-  }
-  &:after {
-    content: " ";
-    display: table;
-    clear: both;
-  }
-}
-
-.container-fluid {
-  @include container-fluid($container-fluid-side-padding);
-}
-
-.container-content {
-  @include container-fluid($container-content-side-padding);
-}
-
 .container {
   @include container(1140px);
+}
+
+.main_button{
+  display: inline-block;
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #c3c3c3;
 }
 
 /*
@@ -128,24 +59,8 @@ button {
  * - perhaps increase font-size by few pixels from the dimensions for "768px" layout
  */
 @media screen and (max-width: #{$screen-md-max}) { // max-width: 1024px
-  .container-fluid {
-    @include container-fluid($container-fluid-side-padding-md);
-  }
-  .container-content {
-    @include container-fluid($container-content-side-padding-md);
-  }
   .container{
     @include container(80%);
-  }
-
-  body{
-    @viewport {
-      user-zoom: fixed;
-    }
-
-    &.showed, &.header-sticky{
-      overflow-y: hidden;
-    }
   }
 }
 
@@ -166,17 +81,6 @@ button {
  * - the main content max-width is relative (set in %) or inherit from the previous breakpoint;
  */
 @media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
-  body{
-    &:before{
-      display: none;
-    }
-  }
-  .container-fluid {
-    @include container-fluid($container-fluid-side-padding-xs);
-  }
-  .container-content {
-    @include container-fluid($container-content-side-padding-xs);
-  }
   .container{
     @include container(90%);
   }

@@ -7,19 +7,18 @@
 
 get_header();
 
-$main_thumbnail = has_post_thumbnail() ? get_the_post_thumbnail_url() : '/wp-content/themes/smartmovie/images/UkraineWheat.jpg';
 ?>
-<section class="section sh_title" style="background: url('<?=$main_thumbnail?>') center top no-repeat; background-size: cover;">
+<section class="section">
     <div class="container">
-        <h1><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyfifteen' ); ?></h1>
-    </div>
+        <h1><?php _e( 'Oops! That page can&rsquo;t be found.', 'smartmovie' ); ?></h1>
 
-</section>
-<section class="section sh_content">
-    <div class="container">
-        <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfifteen' ); ?></p>
+        <p><?php _e( 'It looks like nothing was found...', 'smartmovie' ); ?></p>
 
         <?php get_search_form(); ?>
+
+        <div>
+            or go to <a class="main_button" href="<?=get_home_url()?>">Main Page</a>
+        </div>
     </div>
 </section>
 <?php get_footer(); ?>

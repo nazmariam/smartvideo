@@ -35,8 +35,6 @@ add_action('wp_enqueue_scripts', 'sh_scripts_styles', 1);
 function sh_register_menus() {
     register_nav_menu( 'header', __( 'Top menu', 'theme-slug' ) );
     register_nav_menu( 'footer', __( 'Footer menu', 'theme-slug' ) );
-    register_nav_menu( 'header_btn', __( 'header btn', 'theme-slug' ) );
-    register_nav_menu( 'float_btn', __( 'float btn', 'theme-slug' ) );
 }
 add_action( 'after_setup_theme', 'sh_register_menus' );
 

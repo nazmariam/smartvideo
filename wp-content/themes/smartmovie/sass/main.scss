@@ -1,50 +1,17 @@
 // Helpers
 @import "helpers/variables";
 @import "helpers/mixins";
-@import "helpers/animations";
 
 // Base styles
 @import "normalize";
 @import "base/base";
-@import "base/svg";
-@import "base/class";
 @import "base/typography";
 
 // Components
-@import "components/buttons";
-@import "components/slider";
-@import "components/prices";
-@import "components/news";
-@import "components/events";
-@import "components/forms";
-@import "components/dropdown";
 @import "components/menu";
-@import "components/events_previews";
-@import "components/events-upcoming";
-@import "components/events-filter";
-@import "components/excursions-previews";
-@import "components/museum_program";
-@import "components/page-contacts";
-@import "components/page-procurements";
-@import "components/page-donate";
 @import "components/social_share";
-@import "components/page-visiting";
-@import "components/event-hero";
-@import "components/hero";
-@import "components/contact-form";
-@import "components/modal-window";
-@import "components/slick-slider";
-@import "components/page-event-request";
-@import "components/page-collection";
 
 // Layout
 @import "layout/header";
 @import "layout/content";
-@import "layout/shevchenko";
 @import "layout/footer";
-@import "layout/events-category";
-@import "layout/page-booklets";
-@import "layout/page_science-activity";
-@import "layout/page_general";
-@import "layout/conference";
-@import "layout/search";
