@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Ubuntu Light"), local("Ubuntu-Light"), url("../fonts/ubuntu-v11-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/ubuntu-v11-latin_cyrillic-300.woff") format("woff");
+}
+
+
 //Global
 html {
   font-size: 100%;

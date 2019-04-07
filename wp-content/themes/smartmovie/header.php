@@ -16,21 +16,26 @@
 <body>
 
 <header class="header">
-    <?php
-    if (!is_front_page()){
-        ?>
+    <div class="container">
         <div class="main_link">
-            На головну
+            <?php
+            if (!is_home()){
+                echo '<a class="main_url" href="/">Smart Movie</a>';
+            } else {
+                echo '<span class="main_url">Smart Movie</span>';
+            }
+            ?>
         </div>
-        <div class="top_link">
-            <img src="" alt="">
+        <div class="top_menu">
+		    <?php wp_nav_menu([
+			    'theme_location' => 'header',
+			    'container' => false,
+                'menu_id' => 'nav'
+		    ]);?>
         </div>
-        <div class="back_link">
-            Назад
-        </div>
-        <?php
-    }
-    ?>
+    </div>
 </header>
+
+
 
 <main>

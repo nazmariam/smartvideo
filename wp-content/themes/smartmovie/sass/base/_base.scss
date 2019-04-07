@@ -40,6 +40,24 @@ a:hover {
   border: 1px solid #c3c3c3;
 }
 
+img{
+  &.alignnone{
+    height: auto;
+  }
+  &.alignleft{
+    float: left;
+    margin: 8px 16px 8px 0;
+  }
+  .alignright{
+    float: right;
+    margin: 8px 0 8px 16px;
+  }
+  &.aligncenter{
+    display: block;
+    margin: 8px auto;
+  }
+}
+
 /*
  * Large devices (laptops, less than 1440px)
  * - as prototype use design from the "1366px" layout;
