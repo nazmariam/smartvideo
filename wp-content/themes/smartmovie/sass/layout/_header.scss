@@ -28,12 +28,48 @@ header{
       }
     }
   }
+  #mobile_burger{
+    display: none;
+  }
 }
 
 @media screen and (max-width: #{$screen-lg-max}) { // max-width: 1440px
 }
 
 @media screen and (max-width: #{$screen-md-max}) { // max-width: 1024px
+  header{
+    .top_menu{
+      &.mask{
+        display: block;
+        background: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        #nav{
+          display: flex;
+          flex-direction: column;
+          background: white;
+          width: 80%;
+          font-size: 150%;
+          padding: 32px 8px;
+        }
+      }
+    }
+    #mobile_burger{
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      .line{
+        width: 40px;
+        height: 4px;
+        margin: 4px 0;
+        background: black;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: #{$screen-sm-max}) { // max-width: 768px
