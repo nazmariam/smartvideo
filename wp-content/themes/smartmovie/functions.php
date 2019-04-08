@@ -33,12 +33,12 @@ add_action( 'after_setup_theme', 'sh_register_menus' );
 
 // create widget for Contacts page
 register_sidebar(array(
-    'name' => 'Contacts page form',
-    'id' => 'form-contacts',
-    'before_widget' => '<div class="form-content">',
-    'after_widget' => '</div>',
-    'before_title' => '<h2 class="h2 title"><span class="contact_icon">',
-    'after_title' => '</span></h2>',
+	'name' => 'Contacts page form',
+	'id' => 'form-contacts',
+	'before_widget' => '<div class="form-content">',
+	'after_widget' => '</div>',
+	'before_title' => '<h2 class="h2 title"><span class="contact_icon">',
+	'after_title' => '</span></h2>',
 ));
 
 //Videos custom post type

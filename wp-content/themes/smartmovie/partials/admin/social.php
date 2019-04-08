@@ -5,9 +5,13 @@ if ($_POST) {
     foreach ($_POST as $key => $value) {
         $social_options[$key] = $value;
     }
-    update_option('social_options', $social_options);
+	if (update_option('general_options', $social_options)){
+		echo '<div id="message" class="updated notice notice-success is-dismissible"><p>Settings updated.</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button></div>';
+	}
 }
 $result = get_option('social_options');
+
+//todo: dynamic fields
 ?>
 <div class="wrap">
     <h1 class="wp-heading-inline">Social settings</h1>
@@ -19,13 +23,13 @@ $result = get_option('social_options');
         </div>
 
         <div class="form-group">
-            <label for="twitter">Twitter link:</label>
-            <input type="url" class="form-control" id="twitter" name="twitter" value="<?=$result['twitter']?>">
+            <label for="instagram">Instagram link:</label>
+            <input type="url" class="form-control" id="instagram" name="instagram" value="<?=$result['instagram']?>">
         </div>
 
         <div class="form-group">
-            <label for="instagram">Instagram link:</label>
-            <input type="url" class="form-control" id="instagram" name="instagram" value="<?=$result['instagram']?>">
+            <label for="vimeo">Vimeo link:</label>
+            <input type="url" class="form-control" id="vimeo" name="vimeo" value="<?=$result['vimeo']?>">
         </div>
 
         <p class="submit">

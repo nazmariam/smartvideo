@@ -9,6 +9,7 @@ html {
 body {
   background: #fdfaf3;
   min-height: 100%;
+  color: #333;
 }
 
 a,
@@ -56,6 +57,25 @@ img{
     display: block;
     margin: 8px auto;
   }
+}
+
+input:not([type]),
+input[type=number],
+input[type=search],
+input[type=color],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=password],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+textarea{
+  font-size: 13px;
 }
 
 /*

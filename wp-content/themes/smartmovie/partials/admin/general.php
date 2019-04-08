@@ -11,26 +11,27 @@ if ($_POST) {
 }
 $result = get_option('general_options');
 ?>
-    <div class="wrap">
-        <h1 class="wp-heading-inline">General theme settings</h1>
+<div class="wrap">
+    <h1 class="wp-heading-inline">Social settings</h1>
 
-        <form method="POST">
-            <fieldset class="lang_box">
-                <legend>Google reCaptcha credentials</legend>
+    <form method="POST">
+        <div class="form-group">
+            <label for="tel">Telephone:</label>
+            <input type="tel" class="form-control" id="tel" name="tel" value="<?=$result['tel']?>">
+        </div>
 
-                <div class="form-group">
-                    <label for="recaptcha_sitekey">reCaptcha Sitekey:</label>
-                    <input type="text" class="form-control" id="recaptcha_sitekey" name="recaptcha_sitekey" value="<?=$result['recaptcha_sitekey']?>">
-                </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" class="form-control" id="email" name="email" value="<?=$result['email']?>">
+        </div>
 
-                <div class="form-group">
-                    <label for="recaptcha_secret">reCaptcha Secret:</label>
-                    <input type="password" class="form-control" id="recaptcha_secret" name="recaptcha_secret" value="<?=$result['recaptcha_secret']?>">
-                </div>
-            </fieldset>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" class="form-control" id="address" name="address" value="<?=$result['address']?>">
+        </div>
 
-            <p class="submit">
-                <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
-            </p>
-        </form>
-    </div>
+        <p class="submit">
+            <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+        </p>
+    </form>
+</div>

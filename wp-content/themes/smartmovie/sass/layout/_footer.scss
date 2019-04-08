@@ -1,4 +1,5 @@
 footer {
+  background: #fdfaf3;
   margin: 0;
   width: 100%;
   position: relative;
@@ -7,9 +8,36 @@ footer {
     display: flex;
     justify-content: space-between;
 
+    .column{
+      width: 33%;
+      .col_box{
+        color: #333;
+        div{
+          text-transform: uppercase;
+          display: block;
+          margin: 24px 0;
+          &:before{
+            content: "\2014";
+            margin-right: 5px;
+            font-weight: 300;
+          }
+          a:hover{
+            text-decoration: underline;
+          }
+        }
+        .social-list li{
+          margin: 0 16px;
+        }
+      }
+    }
+
     &.copy {
       color: #cecece;
       font-size:70%;
+      padding: 40px 0 0;
+      &:after{
+        display: none;
+      }
     }
   }
 }
@@ -18,9 +46,18 @@ footer {
 }
 
 @media screen and (max-width: #{$screen-md-max}) { // max-width: 1024px
+
 }
 
 @media screen and (max-width: #{$screen-sm-max}) { // max-width: 768px
+  footer{
+    .container{
+      flex-direction: column;
+      .column{
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
