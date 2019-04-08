@@ -28,7 +28,9 @@ a:hover {
   cursor: pointer;
 }
 
-.section {
+section {
+  background: #fdfaf3;
+  padding: 1px 0;
 }
 .container {
   @include container(1140px);
