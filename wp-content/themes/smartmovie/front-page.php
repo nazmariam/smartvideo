@@ -21,17 +21,17 @@
     <div class="container">
         <h2 class="section_title"><span>НАШИ ТАРИФЫ</span></h2>
         <div class="tarifs">
-            <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/cats/1') center no-repeat; background-size: cover">
+            <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/1') center no-repeat; background-size: cover">
                 <span class="tarif_title">
                     Basic
                 </span>
             </a>
-            <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/cats/2') center no-repeat; background-size: cover">
+            <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/2') center no-repeat; background-size: cover">
                 <span class="tarif_title">
                     Standart
                 </span>
             </a>
-            <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/cats/3') center no-repeat; background-size: cover">
+            <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/3') center no-repeat; background-size: cover">
                 <span class="tarif_title">
                     Pro
                 </span>
@@ -43,25 +43,25 @@
 <section>
     <div class="container">
         <h2 class="section_title"><span>НАШИ РАБОТЫ</span></h2>
+
         <div class="examples">
-            <a href="#" class="example" style="background: url('http://lorempixel.com/400/400/cats/1') center no-repeat; background-size: cover">
-            </a>
-            <a href="#" class="example" style="background: url('http://lorempixel.com/400/400/cats/2') center no-repeat; background-size: cover">
-            </a>
-            <a href="#" class="example" style="background: url('http://lorempixel.com/400/400/cats/3') center no-repeat; background-size: cover">
-            </a>
-            <a href="#" class="example" style="background: url('http://lorempixel.com/400/400/cats/4') center no-repeat; background-size: cover">
-            </a>
-            <a href="#" class="example" style="background: url('http://lorempixel.com/400/400/cats/5') center no-repeat; background-size: cover">
-            </a>
-            <a href="#" class="example" style="background: url('http://lorempixel.com/400/400/cats/6') center no-repeat; background-size: cover">
-            </a>
-            <a href="#" class="example" style="background: url('http://lorempixel.com/400/400/cats/7') center no-repeat; background-size: cover">
-            </a>
-            <a href="#" class="example" style="background: url('http://lorempixel.com/400/400/cats/8') center no-repeat; background-size: cover">
-            </a>
-            <a href="#" class="example" style="background: url('http://lorempixel.com/400/400/cats/9') center no-repeat; background-size: cover">
-            </a>
+            <?php
+            $video_args = array( 'post_type' => 'videos', 'posts_per_page' => 9);
+            //wp query
+            $video_query = new WP_Query($video_args);
+            $events_query = new WP_Query( array('post_type' => array('videos')));
+            while ( $video_query->have_posts() ) :
+	            $video_query->the_post();
+	            $video_url = get_post_meta(get_the_ID(), 'video_url', true);
+	            preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $video_url, $matches);
+	            $video_id = $matches[1];
+	            if ($video_id) {
+		            ?>
+                    <div class="example" data-id="<?= $video_id; ?>" style="background: url('//img.youtube.com/vi/<?= $video_id; ?>/mqdefault.jpg') center no-repeat; background-size: cover;">
+                    </div>
+		            <?php
+	            }
+            endwhile;?>
         </div>
     </div>
 </section>

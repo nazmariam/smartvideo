@@ -10,6 +10,10 @@ body {
   background: #fdfaf3;
   min-height: 100%;
   color: #333;
+  overflow: auto;
+  &.noscroll{
+    overflow: hidden;
+  }
 }
 
 a,
