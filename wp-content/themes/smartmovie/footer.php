@@ -12,13 +12,13 @@
 <footer class="footer">
     <div class="container columns">
         <div class="column">
-            <h2>КОНТАКТЫ</h2>
+            <h2>Контакти</h2>
             <div class="col_box">
 		        <?php get_template_part('partials/footer_contacts'); ?>
             </div>
         </div>
         <div class="column">
-            <h2>МЫ В СЕТИ</h2>
+            <h2>Ми в мережі</h2>
             <div class="col_box">
 		        <?php get_template_part('partials/footer_social'); ?>
             </div>

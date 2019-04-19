@@ -16,8 +16,10 @@ $result = get_option('general_options');
 
     <form method="POST">
         <div class="form-group">
-            <label for="tel">Telephone:</label>
-            <input type="tel" class="form-control" id="tel" name="tel" value="<?=$result['tel']?>">
+            <label for="tel1">Telephone 1:</label>
+            <input type="tel" class="form-control" id="tel1" name="tel1" value="<?=$result['tel1']?>">
+            <label for="tel2">Telephone 12:</label>
+            <input type="tel" class="form-control" id="tel2" name="tel2" value="<?=$result['tel2']?>">
         </div>
 
         <div class="form-group">

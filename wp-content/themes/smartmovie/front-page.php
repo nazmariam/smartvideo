@@ -7,11 +7,11 @@
     </video>
     <div class="container">
         <div class="main_box">
-            <a href="#" class="main_logo">
-                <img src="/wp-content/themes/smartmovie/images/logo.png" alt="main logo">
-            </a>
-            <a href="#" class="main_slogan">
+            <div class="main_slogan">
                 Відео для бізнесу
+            </div>
+            <a href="/contacts" class="main_slogan order">
+                ЗАМОВИТИ
             </a>
         </div>
     </div>
@@ -19,49 +19,37 @@
 
 <section>
     <div class="container">
-        <h2 class="section_title"><span>НАШИ ТАРИФЫ</span></h2>
+        <h2 class="section_title"><span>НАШІ ТАРИФИ</span></h2>
+        <?php
+//        todo: wp query categories with description and picture
+        ?>
         <div class="tarifs">
-            <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/1') center no-repeat; background-size: cover">
+            <div class="tarif_box">
+                <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/1') center no-repeat; background-size: cover">
                 <span class="tarif_title">
                     Basic
                 </span>
-            </a>
-            <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/2') center no-repeat; background-size: cover">
-                <span class="tarif_title">
-                    Standart
-                </span>
-            </a>
-            <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/3') center no-repeat; background-size: cover">
-                <span class="tarif_title">
-                    Pro
-                </span>
-            </a>
-        </div>
-    </div>
-</section>
+                </a>
+                <a href="#" class="price">300$</a>
+            </div>
 
-<section>
-    <div class="container">
-        <h2 class="section_title"><span>НАШИ РАБОТЫ</span></h2>
+            <div class="tarif_box">
+                <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/2') center no-repeat; background-size: cover">
+                    <span class="tarif_title">
+                        Standard
+                    </span>
+                </a>
+                <a href="#" class="price">500$</a>
+            </div>
 
-        <div class="examples">
-            <?php
-            $video_args = array( 'post_type' => 'videos', 'posts_per_page' => 9);
-            //wp query
-            $video_query = new WP_Query($video_args);
-            $events_query = new WP_Query( array('post_type' => array('videos')));
-            while ( $video_query->have_posts() ) :
-	            $video_query->the_post();
-	            $video_url = get_post_meta(get_the_ID(), 'video_url', true);
-	            preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $video_url, $matches);
-	            $video_id = $matches[1];
-	            if ($video_id) {
-		            ?>
-                    <div class="example" data-id="<?= $video_id; ?>" style="background: url('//img.youtube.com/vi/<?= $video_id; ?>/mqdefault.jpg') center no-repeat; background-size: cover;">
-                    </div>
-		            <?php
-	            }
-            endwhile;?>
+            <div class="tarif_box">
+                <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/3') center no-repeat; background-size: cover">
+                    <span class="tarif_title">
+                        Animation
+                    </span>
+                </a>
+                <a href="#" class="price">10$/sec</a>
+            </div>
         </div>
     </div>
 </section>
@@ -72,7 +60,7 @@
         Your browser does not support HTML5 video.
     </video>
     <div class="container">
-        <h2>НАША ЦЕЛЬ — ПРИНОСИТЬ ВАМ НОВЫХ КЛИЕНТОВ И УВЕЛИЧИВАТЬ ВАШИ ПРОДАЖИ</h2>
+        <h2>Наша ціль - приносити вам нових клієнтів та збільшувати продажі</h2>
     </div>
 </section>
 
