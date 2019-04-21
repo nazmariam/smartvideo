@@ -5,7 +5,8 @@
 <div class="popup-wrapper">
     <div class="popup">
         <iframe width="auto" src="" frameborder="0" allowfullscreen id="iframe"></iframe>
-        <a class="button" id="order" href="#">Замовити</a>
+<!--        <a class="button" id="order" href="#">Замовити</a>-->
+<!--	    --><?php //get_template_part('partials/social-share-page'); ?>
     </div>
 </div>
 
@@ -23,7 +24,7 @@
 		        <?php get_template_part('partials/footer_social'); ?>
             </div>
         </div>
-        <div class="column">
+        <div class="column" id="contacts">
 	        <?php
                 if ( is_active_sidebar( 'form-contacts' ) ) {
                     dynamic_sidebar( 'form-contacts' );

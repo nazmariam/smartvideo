@@ -1,21 +1,30 @@
 <?php get_header(); ?>
-    <section>
-        <div>
-            <h1><?php single_cat_title(); ?> (archive)</h1>
-        </div>
-        <div>
-            <?php if (have_posts()): while (have_posts()): the_post(); ?>
-                <div style="border: 1px solid black; margin: 8px; padding: 8px;">
-                    <h2><?php the_title(); ?></h2>
-                    <div>
-                        <img style="max-width: 200px" src="<?php the_post_thumbnail_url(); ?>">
-                    </div>
-                    <?php the_content(); ?>
-                    <a href="<?php the_permalink(); ?> ">
-                        <span>Read more</span>
-                    </a>
-                </div>
-            <?php endwhile; endif; ?>
+    <section class="section">
+        <div class="container">
+            <h1 class="section_title"><span>Усі матеріали</span></h1>
+
+            <div class="examples">
+				<?php
+				$video_args = array( 'post_type' => 'videos');
+				//wp query
+				$video_query = new WP_Query($video_args);
+				$events_query = new WP_Query( array('post_type' => array('videos')));
+				while ( $video_query->have_posts() ) :
+					$video_query->the_post();
+					$video_url = get_post_meta(get_the_ID(), 'video_url', true);
+					preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $video_url, $matches);
+					$video_id = $matches[1];
+					if ($video_id) {
+						?>
+                        <div class="example_box">
+                            <div class="example" data-id="<?= $video_id; ?>" style="background: url('//img.youtube.com/vi/<?= $video_id; ?>/mqdefault.jpg') center no-repeat; background-size: cover;">
+                            </div>
+                            <div class="price"><?php the_title(); ?></div>
+                        </div>
+						<?php
+					}
+				endwhile;?>
+            </div>
         </div>
     </section>
 <?php get_footer(); ?>

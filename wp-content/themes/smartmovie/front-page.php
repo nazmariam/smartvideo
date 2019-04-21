@@ -10,7 +10,7 @@
             <div class="main_slogan">
                 Відео для бізнесу
             </div>
-            <a href="/contacts" class="main_slogan order">
+            <a href="/#contacts" class="main_slogan order">
                 ЗАМОВИТИ
             </a>
         </div>

@@ -53,7 +53,7 @@ function videos_post_type() {
 			'public' => true,
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'videos'),
-			'supports'            => array( 'title', /*'editor', 'excerpt', 'thumbnail'*/),
+			'supports'            => array( 'title', /*'editor',*/ 'excerpt', 'thumbnail'),
 			'exclude_from_search' => true,
 			'taxonomies'  => array( 'category' ),
 			'hierarchical'        => false,

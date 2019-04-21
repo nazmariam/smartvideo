@@ -3,7 +3,7 @@
 <section class="section news category">
     <div class="container">
         <h1>
-            <?=pll__('News and events')?>
+            <?=__('News and events')?>
         </h1>
         <?php
         $news_args = [

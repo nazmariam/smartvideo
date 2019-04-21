@@ -9,13 +9,6 @@ facebook sharing needs API ID
 //share URL, title, description, image
 
 
-//get the post type
-$ip_post_type = get_post_type();
-//define the id
-$ip_id = get_the_ID();
-//get title
-$title = get_the_title( $ip_id );
-
 $social = get_option('social_options');
 $insta_url = $social['instagram'];
 
@@ -23,7 +16,7 @@ $insta_url = $social['instagram'];
 
 <div class="social_share_box">
 
-    <a rel="nofollow" class="icon-link share twitter" target=_blank href="https://twitter.com/share?text=<?=urlencode(get_the_title());?>&url=<?=get_permalink();?>&hashtags=shevchenko_museum&via=shevchenko_museum&related=Shevchenko_museum" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=480,width=640');return false;" title="<?php pll_e('Share on Twitter');?>">
+    <a rel="nofollow" class="icon-link share twitter" target=_blank href="https://twitter.com/share&url=<?=get_permalink();?>&hashtags=SmartMovie&related=SmartMovie" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=480,width=640');return false;" title="Share on Twitter">
         <svg class="svg-icon-social">
             <use xlink:href="#svg-twitter"></use>
         </svg>
@@ -39,7 +32,7 @@ $insta_url = $social['instagram'];
     }
     ?>
 
-    <div id="facebookBtn" class="icon-link share facebook" title="<?php pll_e('Share on Facebook');?>">
+    <div id="facebookBtn" class="icon-link share facebook" title="Share on Facebook">
         <svg class="svg-icon-social">
             <use xlink:href="#svg-facebook"></use>
         </svg>

@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
     $('.example').click(function () {
         $('.popup-wrapper').addClass('visible');
         $('body').toggleClass('noscroll');
-        $('#iframe').attr('height', $( window ).height()).attr('src', 'https://www.youtube.com/embed/' + $(this).attr('data-id'));
+        $('#iframe').attr('height', $( window ).height()*0.8).attr('src', 'https://www.youtube.com/embed/' + $(this).attr('data-id'));
         // $('#iframe')[0].contentWindow.postMessage('{"event":"command","func":"' + 'startVideo' + '","args":""}', '*');
         $("#iframe")[0].src += "?autoplay=1";
     });

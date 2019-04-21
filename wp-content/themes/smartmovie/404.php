@@ -9,15 +9,11 @@ get_header();
 
 ?>
 <section class="section">
-    <div class="container">
-        <h1><?php _e( 'Oops! That page can&rsquo;t be found.', 'smartmovie' ); ?></h1>
-
-        <p><?php _e( 'It looks like nothing was found...', 'smartmovie' ); ?></p>
-
-        <?php get_search_form(); ?>
+    <div class="container center" style="padding: 80px 0">
+        <h1><?php _e( 'Отакої! Схоже що сторінка загубилася...', 'smartmovie' ); ?></h1>
 
         <div>
-            or go to <a class="main_button" href="<?=get_home_url()?>">Main Page</a>
+            <a class="main_button" href="<?=get_home_url()?>">На головну</a>
         </div>
     </div>
 </section>
