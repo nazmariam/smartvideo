@@ -20,36 +20,34 @@
 <section>
     <div class="container">
         <h2 class="section_title"><span>НАШІ ТАРИФИ</span></h2>
-        <?php
-//        todo: wp query categories with description and picture
-        ?>
         <div class="tarifs">
-            <div class="tarif_box">
-                <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/1') center no-repeat; background-size: cover">
-                <span class="tarif_title">
-                    Basic
-                </span>
-                </a>
-                <a href="#" class="price">300$</a>
-            </div>
-
-            <div class="tarif_box">
-                <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/2') center no-repeat; background-size: cover">
-                    <span class="tarif_title">
-                        Standard
-                    </span>
-                </a>
-                <a href="#" class="price">500$</a>
-            </div>
-
-            <div class="tarif_box">
-                <a href="#" class="tarif" style="background: url('http://lorempixel.com/400/400/people/3') center no-repeat; background-size: cover">
-                    <span class="tarif_title">
-                        Animation
-                    </span>
-                </a>
-                <a href="#" class="price">10$/sec</a>
-            </div>
+	        <?php
+	        //        todo: wp query categories with description and picture
+	        //top category - video ID 8
+	        $categories=get_categories(
+		        array(
+                    'parent' => 8,
+                    'hide_empty' => false,
+                    'posts_per_page' => 3,
+                    'orderby'   => 'ID',
+                    'order' => 'ASC',
+                )
+	        );
+	        if ($categories){
+		        foreach ($categories as $category){
+			        ?>
+                    <div class="tarif_box">
+                        <a href="<?=get_category_link($category->cat_ID);?>" class="tarif" style="background: url('<?=z_taxonomy_image_url($category->cat_ID)?>') center no-repeat; background-size: cover">
+                            <span class="tarif_title">
+                                <?=$category->cat_name;?>
+                            </span>
+                        </a>
+                        <a href="<?=get_category_link($category->cat_ID);?>" class="price"><?=$category->category_description?></a>
+                    </div>
+                    <?php
+		        }
+	        }
+	        ?>
         </div>
     </div>
 </section>
