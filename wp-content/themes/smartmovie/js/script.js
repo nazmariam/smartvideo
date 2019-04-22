@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 
     $('.top_menu').click(function () {
         $('.top_menu').removeClass('mask');
-        $('body').toggleClass('noscroll');
+        $('body').removeClass('noscroll');
     });
 
     $('.example').click(function () {

@@ -20,6 +20,17 @@ section.last{
   min-width: 100%;
 }
 
+.section.title{
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1{
+    color: #fff;
+    text-align: center;
+  }
+}
+
 .container{
   position: relative;
   //z-index: 1;
