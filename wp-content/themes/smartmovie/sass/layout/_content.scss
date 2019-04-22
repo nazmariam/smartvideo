@@ -12,7 +12,8 @@ section.last{
   }
 }
 
-#top_video{
+#top_video,
+#top_video2{
   position: fixed;
   z-index: -1;
   right: 0;
@@ -148,6 +149,9 @@ section.last{
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  .example_box{
+    margin: auto;
+  }
   .example{
     cursor: pointer;
     width: 270px;
@@ -160,6 +164,15 @@ section.last{
     border-radius: 50%;
     overflow: hidden;
     margin: 0 32px 0;
+  }
+}
+
+.content{
+  h1, h2{
+    text-align: center;
+  }
+  h2, h3, h4{
+    font-family: $default-font;
   }
 }
 

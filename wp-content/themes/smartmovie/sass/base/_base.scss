@@ -21,7 +21,7 @@ a:hover,
 a:active,
 a:focus,
 a:visited {
-  color: inherit;
+  color: #333;
   width: inherit;
   height: inherit;
   outline: none!important;
@@ -35,6 +35,7 @@ a:hover {
 section {
   background: #fdfaf3;
   padding: 1px 0;
+  overflow: hidden;
 }
 .container {
   @include container(1140px);

@@ -74,6 +74,9 @@ header{
         background: black;
       }
     }
+    #nav>li+li{
+      margin-left: 0;
+    }
   }
 }
 

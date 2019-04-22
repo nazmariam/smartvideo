@@ -2,7 +2,7 @@
 
 <section class="section top">
     <video autoplay loop muted id="top_video">
-        <source src="/wp-content/themes/smartmovie/Cloud-Landing-video-banner-1920.mp4" type="video/mp4">
+        <source src="/wp-content/themes/smartmovie/showreel.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
     <div class="container">
@@ -53,8 +53,8 @@
 </section>
 
 <section class="section last">
-    <video autoplay loop muted id="top_video">
-        <source src="/wp-content/themes/smartmovie/Cloud-Landing-video-banner-1920.mp4" type="video/mp4">
+    <video autoplay loop muted id="top_video2">
+        <source src="/wp-content/themes/smartmovie/showreel.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
     <div class="container">
