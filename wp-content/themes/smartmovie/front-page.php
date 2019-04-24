@@ -1,15 +1,19 @@
 <?php get_header(); ?>
 
 <section class="section top">
-    <video autoplay loop muted id="top_video">
-        <source src="/wp-content/themes/smartmovie/showreel.mp4" type="video/mp4">
+    <video autoplay loop muted id="top_video" poster="showreel1.jpg">
+        <source src="/wp-content/themes/smartmovie/showreel1.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
     <div class="container">
         <div class="main_box">
-            <div class="main_slogan">
-                Відео для бізнесу
-            </div>
+	        <?php
+	        $options = get_option('general_options');
+	        if (isset($options['top_text'])){
+		        echo '<div class="main_slogan">' . $options['top_text'] . '</div>';
+	        }
+	        ?>
+
             <a href="/#contacts" class="main_slogan order">
                 ЗАМОВИТИ
             </a>
@@ -53,12 +57,17 @@
 </section>
 
 <section class="section last">
-    <video autoplay loop muted id="top_video2">
-        <source src="/wp-content/themes/smartmovie/showreel.mp4" type="video/mp4">
+    <video autoplay loop muted id="top_video2" poster="showreel2.jpg">
+        <source src="/wp-content/themes/smartmovie/showreel2.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
     <div class="container">
-        <h2>Наша ціль - приносити вам нових клієнтів та збільшувати продажі</h2>
+        <?php
+        $options = get_option('general_options');
+        if (isset($options['bottom_text'])){
+            echo '<h2>' . $options['bottom_text'] . '</h2>';
+        }
+        ?>
     </div>
 </section>
 

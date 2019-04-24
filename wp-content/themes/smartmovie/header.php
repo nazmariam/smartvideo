@@ -20,9 +20,9 @@
         <div class="main_link">
             <?php
             if (!is_home()){
-                echo '<a class="main_url" href="/">Smart Movie production</a>';
+                echo '<a class="main_url" href="/">Smart Movie <span>production</span></a>';
             } else {
-                echo '<span class="main_url">Smart Movie production</span>';
+                echo '<span class="main_url">Smart Movie <span>production</span></span>';
             }
             ?>
         </div>
