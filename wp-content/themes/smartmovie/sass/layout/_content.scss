@@ -282,6 +282,13 @@ h1.section_title{
 }
 
 @media screen and (max-width: #{$screen-lg-max}) { // max-width: 1440px
+  h1.section_title {
+    font-size: 56px;
+    position: relative;
+    margin-top: 0;
+    top: -40px;
+    pointer-events: none;
+  }
 }
 
 @media screen and (max-width: #{$screen-md-max}) { // max-width: 1024px
