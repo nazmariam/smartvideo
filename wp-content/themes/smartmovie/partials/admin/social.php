@@ -1,6 +1,5 @@
 <?php
 if ($_POST) {
-    var_dump($_POST);
     $social_options = array();
 
     foreach ($_POST as $key => $value) {
@@ -32,6 +31,11 @@ $result = get_option('social_options');
         <div class="form-group">
             <label for="instagram">Instagram link:</label>
             <input type="url" class="form-control" id="instagram" name="instagram" value="<?=$result['instagram']?>">
+        </div>
+
+        <div class="form-group">
+            <label for="vimeo">Vimeo link:</label>
+            <input type="url" class="form-control" id="vimeo" name="vimeo" value="<?=$result['vimeo']?>">
         </div>
 
         <p class="submit">

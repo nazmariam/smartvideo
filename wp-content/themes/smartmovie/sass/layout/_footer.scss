@@ -7,26 +7,23 @@ footer {
   .container{
     display: flex;
     justify-content: space-between;
+    &:after{
+      display: none;
+    }
 
     .column{
       width: 33%;
       .col_box{
         color: #333;
         div{
-          text-transform: uppercase;
           display: block;
           margin: 24px 0;
-          &:before{
-            content: "\2014";
-            margin-right: 5px;
-            font-weight: 300;
-          }
           a:hover{
             text-decoration: underline;
           }
         }
         .social-list li{
-          margin: 0 16px;
+          margin: 0 24px 0 0;
         }
       }
     }

@@ -5,13 +5,20 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    //height: 80px;
     color: black;
     &:after{
       display: none;
     }
   }
   .main_link{
+    border-bottom: 2px solid #333;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    &.main_page{
+      border: none;
+    }
     .main_url{
       display: block;
       cursor: pointer;
@@ -30,12 +37,26 @@ header{
     }
   }
   .top_menu{
+    border-bottom: 2px solid #333;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    &.main_page{
+      border: none;
+    }
     ul{
       li{
         list-style: none;
+        margin: 0 16px;
+        &:first-child{
+          margin-left: 0;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
         a{
           font-size: 22px;
-          padding: 0 8px;
+          padding: 0;
         }
       }
     }

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="section top">
-    <video autoplay loop muted id="top_video" poster="showreel1.jpg">
+    <video autoplay loop muted playsinline id="top_video" poster="/wp-content/themes/smartmovie/showreel1.jpg">
         <source src="/wp-content/themes/smartmovie/showreel1.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
@@ -14,7 +14,7 @@
 	        }
 	        ?>
 
-            <a href="/#contacts" class="main_slogan order">
+            <a href="/contacts" class="main_slogan order">
                 ЗАМОВИТИ
             </a>
         </div>
@@ -23,7 +23,6 @@
 
 <section>
     <div class="container">
-        <h2 class="section_title"><span>НАШІ ТАРИФИ</span></h2>
         <div class="tarifs">
 	        <?php
 	        //        todo: wp query categories with description and picture
@@ -33,7 +32,7 @@
                     'parent' => 8,
                     'hide_empty' => false,
                     'posts_per_page' => 3,
-                    'orderby'   => 'ID',
+                    'orderby'   => 'modified',
                     'order' => 'ASC',
                 )
 	        );
@@ -57,7 +56,7 @@
 </section>
 
 <section class="section last">
-    <video autoplay loop muted id="top_video2" poster="showreel2.jpg">
+    <video autoplay loop muted playsinline id="top_video2" poster="/wp-content/themes/smartmovie/showreel2.jpg">
         <source src="/wp-content/themes/smartmovie/showreel2.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>

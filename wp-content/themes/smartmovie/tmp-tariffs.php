@@ -7,7 +7,7 @@ get_header();
 ?>
 <section>
     <div class="container">
-        <h2 class="section_title"><span><?php the_title(); ?></span></h2>
+        <h1 class="section_title"><span><?php the_title(); ?></span></h1>
         <div class="tarifs">
 			<?php
 			//        todo: wp query categories with description and picture
@@ -18,7 +18,6 @@ get_header();
 					'hide_empty' => false,
 					'posts_per_page' => 3,
 					'orderby'   => 'ID',
-					'order' => 'ASC',
 				)
 			);
 			if ($categories){

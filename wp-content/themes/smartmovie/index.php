@@ -3,7 +3,7 @@ get_header();
 
 $main_thumbnail = has_post_thumbnail() ? get_the_post_thumbnail_url() : '/wp-content/themes/smartmovie/images/night_sky.jpg';
 ?>
-<section class="section title" style="background: url('<?=$main_thumbnail?>') center top no-repeat; background-size: cover;">
+<section class="section title" style="background: url('<?=$main_thumbnail?>') center no-repeat; background-size: cover;">
     <div class="container">
         <h1><?php the_title(); ?></h1>
     </div>

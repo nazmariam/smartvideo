@@ -35,7 +35,7 @@ a:hover {
 section {
   background: #fdfaf3;
   padding: 1px 0;
-  overflow: hidden;
+  //overflow: hidden;
 }
 .container {
   @include container(1140px);

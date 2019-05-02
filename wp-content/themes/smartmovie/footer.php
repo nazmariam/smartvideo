@@ -24,17 +24,23 @@
 		        <?php get_template_part('partials/footer_social'); ?>
             </div>
         </div>
-        <div class="column" id="contacts">
-	        <?php
-                if ( is_active_sidebar( 'form-contacts' ) ) {
-                    dynamic_sidebar( 'form-contacts' );
-                }
+        <?php
+        if (!is_page('contacts')){
             ?>
-        </div>
+            <div class="column" id="contacts">
+		        <?php
+		        if ( is_active_sidebar( 'form-contacts' ) ) {
+			        dynamic_sidebar( 'form-contacts' );
+		        }
+		        ?>
+            </div>
+            <?php
+        }
+        ?>
 
     </div>
     <div class="container copy">
-        <div>&copy; SmartMovie</div>
+        <div>&copy; SmartMovie <?=date('Y')?></div>
         <div>created by <a href="https://fedirko.pro">FEDIRKO.PRO</a></div>
     </div>
 </footer>

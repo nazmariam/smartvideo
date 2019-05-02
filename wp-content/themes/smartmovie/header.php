@@ -17,7 +17,13 @@
 
 <header class="header">
     <div class="container">
-        <div class="main_link">
+        <?php
+        $sub_class = '';
+        if (is_home()){
+	        $sub_class = 'main_page';
+        }
+        ?>
+        <div class="main_link <?=$sub_class;?>">
             <?php
             if (!is_home()){
                 echo '<a class="main_url" href="/">Smart Movie <span>production</span></a>';
@@ -26,7 +32,7 @@
             }
             ?>
         </div>
-        <div class="top_menu">
+        <div class="top_menu <?=$sub_class;?>">
 		    <?php wp_nav_menu([
 			    'theme_location' => 'header',
 			    'container' => false,
