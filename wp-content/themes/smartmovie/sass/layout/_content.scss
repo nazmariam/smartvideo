@@ -173,6 +173,7 @@ h1.section_title{
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 40px 0;
   .example_box{
     margin: auto;
   }
@@ -304,6 +305,7 @@ h1.section_title{
 @media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
   h1.section_title{
     font-size: 40px;
+    top: 0;
     &:before{
       display: none;
     }
@@ -312,9 +314,22 @@ h1.section_title{
     }
   }
   .examples{
+    .example_box{
+      margin-bottom: 24px;
+    }
     .example{
       margin: 0;
     }
+  }
+
+  .tarifs{
+    .tarif_box{
+      margin-bottom: 24px;
+    }
+  }
+
+  .content div.wpcf7{
+    width: 100%;
   }
 }
 

@@ -58,6 +58,25 @@ footer {
 }
 
 @media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
+  footer{
+    .container{
+      .column{
+        margin-bottom: 24px;
+        text-align: center;
+        .col_box{
+          .social-list {
+            ul{
+              display: flex;
+              justify-content: space-between;
+              li{
+                margin: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: #{$screen-xxs-max}) { // max-width: 320px

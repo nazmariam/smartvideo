@@ -122,6 +122,22 @@ header{
 }
 
 @media screen and (max-width: #{$screen-xs-max}) { // max-width: 590px
+  header{
+    .main_link,
+    .top_menu{
+      border: none;
+    }
+    .main_link{
+      .main_url{
+        display: flex;
+        align-items: center;
+        span{
+          padding-left: 8px;
+          top: 0;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: #{$screen-xxs-max}) { // max-width: 320px
