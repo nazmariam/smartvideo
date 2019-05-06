@@ -1,6 +1,8 @@
 section.top,
 section.last{
   background: transparent;
+  position: relative;
+  overflow: hidden;
 }
 
 .last{
@@ -14,14 +16,11 @@ section.last{
 
 #top_video,
 #top_video2{
-  position: fixed;
+  position: absolute;
   z-index: -1;
   right: 0;
   bottom: 0;
   min-width: 100%;
-  top: 80px;
-}
-#top_video2{
   top: 0;
 }
 
